@@ -15,7 +15,7 @@ const addUser = async (req, res) => {
   try {
     const { name, phone, email, location, latitude, longitude } = req.body;
 
-    if (!name || !phone || !email || !location || !latitude || !longitude) {
+    if (!name || !phone || !email || !location ) {
       return res.status(400).json({ success: false, message: 'All fields are required' });
     }
 
